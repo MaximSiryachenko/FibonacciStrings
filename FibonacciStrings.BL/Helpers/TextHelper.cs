@@ -16,9 +16,9 @@ namespace FibonacciStrings.BL.Helpers
         {
             char[] charArray = s.ToCharArray();
             string reverse = String.Empty;
-            for (int i = charArray.Length - 1; i >= 0; i--)
+            for (int charIndex = charArray.Length - 1; charIndex >= 0; charIndex--)
             {
-                reverse += charArray[i];
+                reverse += charArray[charIndex];
             }
             return reverse;
         }

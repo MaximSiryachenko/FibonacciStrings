@@ -30,11 +30,11 @@ namespace FibonacciStrings.BL.Services
         public void FileProcessing()
         {
             string[] lines = _fileManager.ReadFile(defaultPath);
-            for (int i = 0; i < lines.Length; i++)
+            for (int lineIndex = 0; lineIndex < lines.Length; lineIndex++)
             {
-                if (FibonacciExtension.IsFibonacci(i + 1))
+                if ((lineIndex + 1).IsFibonacci())
                 {
-                    _fileManager.WriteFile(lines[i].Reverse());
+                    _fileManager.WriteFile(lines[lineIndex].Reverse());
                 }
             }
         }
